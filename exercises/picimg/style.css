@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+}
+* {
+margin: 0;
+padding: 0;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+outline: none;
+}
+input {
+line-height: normal;
+}
+label,
+button {
+cursor: pointer;
+}
+a {
+text-decoration: none;
+}
+img {
+display: block;
+max-width: 100%;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+/* using rem unit */
+html {
+font-size: 62.5%;
+}
+a {
+text-decoration: none;
+}
+img {
+display: block;
+max-width: 100%;
+}
+input,
+button,
+body {
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+line-height: 1;
+}
+
+/* picsum photos */
+.images {
+padding: 50px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 25px;
+}
+.image-item {
+height: 220px;
+padding: 10px;
+border-radius: 10px;
+background-color: white;
+border: 1px solid #eee;
+}
+.image-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.load-more {
+display: block;
+width: max-content;
+padding: 15px 30px;
+border-radius: 4px;
+color: white;
+background-color: #6a5af9;
+border: 0;
+margin: 25px auto;
+}
+.image-loader {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: spin 1s infinite linear forwards;
+width: 50px;
+height: 50px;
+border: 5px solid #6a5af9;
+border-right: 5px solid transparent;
+border-radius: 50%;
+}
+@keyframes spin {
+to {
+transform: translate(-50%, -50%) rotate(360deg);
+}
+}

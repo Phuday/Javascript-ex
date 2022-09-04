@@ -1,0 +1,112 @@
+html {
+    box-sizing: border-box;
+}
+* {
+margin: 0;
+padding: 0;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+outline: none;
+}
+input {
+line-height: normal;
+}
+label,
+button {
+cursor: pointer;
+}
+a {
+text-decoration: none;
+}
+img {
+display: block;
+max-width: 100%;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+/* using rem unit */
+html {
+font-size: 62.5%;
+}
+a {
+text-decoration: none;
+}
+img {
+display: block;
+max-width: 100%;
+}
+input,
+button,
+body {
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+line-height: 1;
+}
+.joke {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 100px 50px;
+border-radius: 8px;
+border: 1px solid #eee;
+}
+.joke-heading {
+font-size: 30px;
+font-weight: 500;
+line-height: 1.5;
+margin-bottom: 30px;
+text-align: center;
+}
+.joke-button {
+border: 0;
+outline: none;
+display: block;
+padding: 0 30px;
+border-radius: 8px;
+color: white;
+background-color: #20e3b2;
+position: relative;
+height: 55px;
+width: 100%;
+max-width: 200px;
+}
+.loader {
+width: 20px;
+height: 20px;
+border: 3px solid white;
+border-left: 3px solid transparent;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: spin 1s infinite linear forwards;
+display: none;
+}
+@keyframes spin {
+to {
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+.joke.is-loading .joke-button {
+opacity: 0.5;
+pointer-events: none;
+}
+.joke.is-loading .joke-button .loader {
+display: block;
+}
+.joke.is-loading .joke-button span {
+display: none;
+}
